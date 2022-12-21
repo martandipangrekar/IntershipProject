@@ -1,0 +1,30 @@
+Actually i am in emergency so i can't able to write correct solution. But I will try my best and i know this is 70 to 80% correct solution. Please Go through that.
+
+
+
+Steps :====>
+
+To apply the super trend indicator to generate a signal on each 5 minute candle, you can use the following steps:
+
+Calculate the average true range (ATR) for the past 7 periods (in this case, 5 minute candles). The ATR is a measure of volatility,
+ and it is used to determine the stop loss and take profit levels for the super trend indicator.
+
+Calculate the basic upper band and lower band using the following formulas:
+
+Upper Band = (Highest high of the past 7 periods) + (MULTIPLIER * ATR)
+Lower Band = (Lowest low of the past 7 periods) - (MULTIPLIER * ATR)
+Determine the super trend direction based on the current close price and the upper and lower bands. 
+If the current close price is above the upper band, the super trend is up (long signal). 
+If the current close price is below the lower band, the super trend is down (short signal).
+
+If the super trend direction changes from the previous period, adjust the upper and lower bands using the following formulas:
+
+If the super trend changes from down to up (long signal):
+Upper Band = (Highest high of the past 7 periods) + (MULTIPLIER * ATR)
+Lower Band = (Current close price) - (MULTIPLIER * ATR)
+If the super trend changes from up to down (short signal):
+Upper Band = (Current close price) + (MULTIPLIER * ATR)
+Lower Band = (Lowest low of the past 7 periods) - (MULTIPLIER * ATR)
+Repeat these steps for each subsequent 5 minute candle until you want to stop generating signals.
+It's important to note that the super trend indicator is a trend following indicator, and it works best in trending markets. 
+It may not be as effective in ranging or choppy markets
